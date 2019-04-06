@@ -24,12 +24,11 @@
     <header class="top">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a class="active" href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="products.html">Products</a>
-            <a href="rates.html">Rates</a>
-            <a href="blog-page.html">Blog</a>
+            <a class="active" href="<?php echo site_url("Home") ?>">Home</a>
+           <!-- <a href="#">About</a>
+            <a href="#">Contacts</a>
+            <a href="#">Feedback</a>
+            <a href="#">Read Blog</a> -->
         </div>
         <!-- Nav section Start -->
         <nav id="navbar">
@@ -50,12 +49,12 @@
                                 <span class="slide-menu" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
                             </div>
                         </div>
-                        <div class="social-icons another">
+                        <!-- <div class="social-icons another">
                             <i class="fa fa-facebook-official" aria-hidden="true"></i>
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                             <i class="fa fa-pinterest" aria-hidden="true"></i>
                             <i class="fa fa-youtube" aria-hidden="true"></i>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!--Row Ended-->
