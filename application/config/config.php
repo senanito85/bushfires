@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://3.16.175.221/';
+$config['base_url'] = 'http://Campingplanner.tk/';
 
 /*
 |--------------------------------------------------------------------------
