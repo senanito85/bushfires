@@ -31,7 +31,7 @@
              </div>
          </div>
          <div class="row">
-             <div class="col-md-4 col-sm-12 col-12 box-1" data-aos="fade-right" data-aos-duration="400">
+             <div class="col-md-3 col-sm-12 col-12 box-1" data-aos="fade-right" data-aos-duration="400">
                  <div class="circle">
                      <div class="gradient"></div>
                      <div class="circle__inner">
@@ -44,7 +44,7 @@
                      </div>
                  </div>
              </div>
-             <div class="col-md-4 col-sm-12 col-12 box-2" data-aos="fade-up" data-aos-duration="400">
+             <div class="col-md-3 col-sm-12 col-12 box-2" data-aos="fade-up" data-aos-duration="400">
                  <div class="circle">
                      <div class="gradient"></div>
                      <div class="circle__inner">
@@ -57,7 +57,7 @@
                      </div>
                  </div>
              </div>
-             <div class="col-md-4 col-sm-12 col-12 box-3" data-aos="fade-left" data-aos-duration="400">
+             <div class="col-md-3 col-sm-12 col-12 box-3" data-aos="fade-left" data-aos-duration="400">
                  <div class="circle">
                      <div class="gradient"></div>
                      <div class="circle__inner">
@@ -65,6 +65,19 @@
                              <div class="circle__content">
                                  <h4><a href="<?php echo site_url('Fresh_Food'); ?>">Fresh Food</a></h4>
                                  <p><a href="<?php echo site_url('Fresh_Food'); ?>"></a></p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-md-3 col-sm-12 col-12 box-4" data-aos="fade-left" data-aos-duration="400">
+                 <div class="circle">
+                     <div class="gradient"></div>
+                     <div class="circle__inner">
+                         <div class="circle__wrapper">
+                             <div class="circle__content">
+                                 <h4><a href="<?php echo site_url('Hospitals'); ?>">Hospitals</a></h4>
+                                 <p><a href="<?php echo site_url('Hospitals'); ?>"></a></p>
                              </div>
                          </div>
                      </div>
@@ -82,7 +95,7 @@
          <div class="row aos-init aos-animate" data-aos="fade-up" data-aos-duration="400">
              <div class="col-md-3">
                  <figure>
-                     <img src="http://3.16.175.221/includes/assets/images/services-bg.jpg " alt="The Pulpit Rock">
+                     <img src="<?php echo site_url('includes/assets/images/services-bg.jpg'); ?>" alt="The Pulpit Rock">
                  </figure>
                  <div class="gradient"></div>
              </div>
@@ -97,18 +110,18 @@
                          <div class="row">
                              <div class="col-xl-4 col-lg-6 col-md-6 col-12 contant-part-1">
                                  <ul>
-                                     <li><i class="fa fa-envira" aria-hidden="true"></i><span><a href="services.html">Learn the Terrain </a></span></li>
-                                     <li><i class="fa fa-envira" aria-hidden="true"></i><span><a href="services.html">Mark your way out </a></span></li>
-                                     <li><i class="fa fa-envira" aria-hidden="true"></i><span><a href="services.html">Check Closest Shelters </a></span> </li>
-            <li><i class="fa fa-envira" aria-hidden="true"></i><span><a href="services.html">Drink more water</a></span></li>
+                                     <li><i class="fa fa-envira" aria-hidden="true"></i><span>Learn the Terrain </li>
+                                     <li><i class="fa fa-envira" aria-hidden="true"></i><span>Mark your way out </span></li>
+                                     <li><i class="fa fa-envira" aria-hidden="true"></i><span>Check Closest Shelters </span> </li>
+                                     <li><i class="fa fa-envira" aria-hidden="true"></i><span>Drink more water</span></li>
                                  </ul>
                              </div>
                              <div class="col-xl-4 col-lg-6 col-md-6 col-12 contant-part-2">
                                  <ul>
-                                     <li><i class="fa fa-envira" aria-hidden="true"></i><span><a href="services.html">Check weather </a></span></li>
-                                     <li><i class="fa fa-envira" aria-hidden="true"></i><span><a href="services.html">Call 000</a></span></li>
-                                     <li><i class="fa fa-envira" aria-hidden="true"></i><span><a href="services.html">Evacuate immediately</a></span> </li>
-            <li><i class="fa fa-envira" aria-hidden="true"></i><span><a href="services.html">Action quickly</a></span></li>
+                                     <li><i class="fa fa-envira" aria-hidden="true"></i><span>Check weather </span></li>
+                                     <li><i class="fa fa-envira" aria-hidden="true"></i><span>Call 000</span></li>
+                                     <li><i class="fa fa-envira" aria-hidden="true"></i><span>Evacuate immediately</span> </li>
+                                     <li><i class="fa fa-envira" aria-hidden="true"></i><span>Action quickly</span></li>
                                  </ul>
                              </div>
                          </div>
@@ -157,12 +170,7 @@
                          </div>
                      </div>
                      <div class="col-md-12">
-                         <p>    Victoria’s hospital system is made up of public and private hospitals (including day procedure centres). There are 250 hospitals across Melbourne and regional Victoria. Some service a particular community need, such as emergency services, laboratory tests or x-rays.  
-                            Larger health services in the city, outer suburbs and regional towns provide 24 hour care with specialist emergency staff in their
-                            emergency departments (ED). Both public and private hospitals operate EDs.
-                            Smaller rural health services may provide emergency care through their urgent care centres or primary injury services. There are
-                            50 urgent care centres in Victoria and 28 primary injury services in rural hospitals that provide different levels of emergency care,
-                            supported by local doctors on-call. These services may not be open 24 hours a day.</p>
+                         <p>    Victoria’s hospital system is made up of public and private hospitals. There are 250 hospitals across Melbourne and regional Victoria. These services may not be open 24/7</p>
                          <!-- <button class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Hospitals</button> -->
                         
                      </div>
@@ -182,9 +190,9 @@
  <!-- Section-4 section Ended-->
 
  <!-- Blog section start-->
- <section class="blog">
+ <!-- <section class="blog"> -->
      <!-- container Start-->
-     <div class="container">
+     <!-- <div class="container">
          <div class="row">
              <div class="col-md-12 col-12 heading">
                  <img src="<?php echo base_url("includes/assets/images/leaf.png") ?>" alt="">
@@ -256,11 +264,11 @@
              </div>
          </div>
          <div class="row">
-             <div class="col-md-12 col-12 button">
+             <div class="col-md-12 col-12 button"> -->
                  <!-- <button class="btn btn-success" >Plan Your Trip</button> -->
-             </div>
+             <!-- </div>
          </div>
-     </div>
+     </div> -->
      <!-- container Ended-->
- </section>
+ <!-- </section> -->
  <!-- Blog section Ended-->

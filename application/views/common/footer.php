@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="row" data-aos="fade-up" data-aos-duration="400">
                     <div class="col-lg-3 col-md-12">
-                        <a href="index.html"><img src="<?php echo base_url("includes/assets/images/footer-logo-bg.png") ?>" alt="logo"></a>
+                        <a href="#"><img src="<?php echo base_url("includes/assets/images/footer-logo-bg.png") ?>" alt="logo"></a>
                     </div>
                     <div class="col-lg-9 col-md-12 right-part">
                         <ul class="ml-auto">

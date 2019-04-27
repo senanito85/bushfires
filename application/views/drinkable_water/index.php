@@ -4,6 +4,9 @@
         height: 400px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
+       a.btn.btn-success.dw {
+            background: #90EE90 !important;
+        }  
     </style>
     <section class="banner-another ">
         <!-- Banner section Start-->
@@ -14,9 +17,11 @@
          <div class="container">
              <div class="row">
                  <div class="col-md-12 col-12 heading">
+                        <a href="<?php echo site_url('Combined_Map'); ?>" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Combined Map</a>
                         <a href="<?php echo site_url('Emergency_Shelters'); ?>" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Emergency Shelters</a>
-                        <a href="<?php echo site_url('Drinkable_Water'); ?>" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Drinkable Water</a>
+                        <a href="<?php echo site_url('Drinkable_Water'); ?>" class="btn btn-success btn-lg active dw" role="button" aria-pressed="true">Drinkable Water</a>
                         <a href="<?php echo site_url('Fresh_Food'); ?>" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Fresh Food</a>
+                        <a href="<?php echo site_url('Hospitals'); ?>" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Hospitals</a>
                  </div>
              </div>
        
@@ -65,7 +70,7 @@ function initMap() {
 var center = { lat:-37.220485, lng: 144.912069};
 var locations = <?php echo $data['locations']; ?>;
 var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 7,
+    zoom: 7, 
     center: center
   });
 var infowindow =  new google.maps.InfoWindow({});
@@ -73,6 +78,9 @@ var marker, count;
 for (count = 0; count < locations.length; count++) {
     marker = new google.maps.Marker({
       position: new google.maps.LatLng(locations[count][1], locations[count][2]),
+      icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+    },
       map: map,
       title: locations[count][0]
     });

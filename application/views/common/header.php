@@ -25,10 +25,8 @@
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a class="active" href="<?php echo site_url("Home") ?>">Home</a>
-           <!-- <a href="#">About</a>
-            <a href="#">Contacts</a>
-            <a href="#">Feedback</a>
-            <a href="#">Read Blog</a> -->
+            <a href="<?php echo site_url("Blog/One") ?>">What to do during bushfire</a>
+            <a href="<?php echo site_url("Blog/Two") ?>">Your bushfire plan</a>
         </div>
         <!-- Nav section Start -->
         <nav id="navbar">
@@ -40,7 +38,7 @@
                         <p>In bushfire emenergency <span>call  000  or  112</span></p>
                     </div>
                     <div class="col-lg-2 col-md-2 col-5 align-self-center logo">
-                        <a href="index.html"><img src="<?php echo base_url("includes/assets/images/nav-logo.png") ?>" alt="logo"></a>
+                        <a href="#"><img src="<?php echo base_url("includes/assets/images/nav-logo.png") ?>" alt="logo"></a>
                     </div>
                     <div class="col-lg-5 col-md-5 col-7 align-self-center right-side">
                         <div class="social-icons square">

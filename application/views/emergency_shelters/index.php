@@ -4,6 +4,9 @@
         height: 400px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
+       a.btn.btn-success.es {
+            background: #90EE90 !important;
+        }
     </style>
     <section class="banner-another ">
         <!-- Banner section Start-->
@@ -16,9 +19,11 @@
          <div class="container">
              <div class="row">
                  <div class="col-md-12 col-12 heading">
-                        <a href="<?php echo site_url('Emergency_Shelters'); ?>" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Emergency Shelters</a>
+                        <a href="<?php echo site_url('Combined_Map'); ?>" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Combined Map</a>
+                        <a href="<?php echo site_url('Emergency_Shelters'); ?>" class="btn btn-success btn-lg active es" role="button" aria-pressed="true">Emergency Shelters</a>
                         <a href="<?php echo site_url('Drinkable_Water'); ?>" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Drinkable Water</a>
                         <a href="<?php echo site_url('Fresh_Food'); ?>" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Fresh Food</a>
+                        <a href="<?php echo site_url('Hospitals'); ?>" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Hospitals</a>
                  </div>
              </div>
        
@@ -41,13 +46,13 @@
                     </div>
                     <div class="col-lg-9 col-md-8 col-12 col1">
                         <p>Community Fire Refuges (CFRs) are only activated and opened once there is significant fire in the local area. 
-Community Fire Refuges offer a last resort shelter option if you cannot leave the area in the event of a fire. 
-Most Neighbourhood Safer Places - Places of Last Resort are open-air spaces such as sports ovals, 
-whereas Community Fire Refuges are enclosed buildings that are built or modified to withstand bushfire. 
-Another last resort shelter option is a Bushfire Place of Last Resort. These do not provide the same level of protection 
-as a well-constructed defendable home, private bushfire shelter or a Community Fire Refuge. 
-They may be no more than an open space, but have been assessed to provide a level of protection from the effects of radiant heat. 
-There are more than 290 Bushfire Places of Last Resort in Victoria</p>
+                        Community Fire Refuges offer a last resort shelter option if you cannot leave the area in the event of a fire. 
+                        Most Neighbourhood Safer Places - Places of Last Resort are open-air spaces such as sports ovals, 
+                        whereas Community Fire Refuges are enclosed buildings that are built or modified to withstand bushfire. 
+                        Another last resort shelter option is a Bushfire Place of Last Resort. These do not provide the same level of protection 
+                        as a well-constructed defendable home, private bushfire shelter or a Community Fire Refuge. 
+                        They may be no more than an open space, but have been assessed to provide a level of protection from the effects of radiant heat. 
+                        There are more than 290 Bushfire Places of Last Resort in Victoria</p>
                     </div>
                      <div class="col-lg-12 col-md-12 col-12">
                         <!--The div element for the map -->
@@ -76,6 +81,9 @@ var marker, count;
 for (count = 0; count < locations.length; count++) {
     marker = new google.maps.Marker({
       position: new google.maps.LatLng(locations[count][1], locations[count][2]),
+      icon: {
+      url: "http://maps.google.com/mapfiles/marker_black.png"
+    },
       map: map,
       title: locations[count][0]
     });
