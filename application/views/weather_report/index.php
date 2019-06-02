@@ -8,7 +8,7 @@ $lon = 144.9442;
 $googleApiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId . "&lang=en&units=metric&APPID=" . $apiKey;
 $googleApiUrl = 'http://api.openweathermap.org/data/2.5/uvi?appid='.$apiKey.'&lat='..'&lon='.; 
 */
-$googleApiUrl = 'http://api.openweathermap.org/data/2.5/forecast/?id='.$cityId.'&lang=en&units=metric&cnt=24&appid='.$apiKey;
+$googleApiUrl = 'https://api.openweathermap.org/data/2.5/forecast/?id='.$cityId.'&lang=en&units=metric&cnt=24&appid='.$apiKey;
 
 
 $ch = curl_init();
@@ -136,7 +136,7 @@ if($fdi_tomorrow_after>0){
     } 
 }
 
-$uvi = 'http://api.openweathermap.org/data/2.5/uvi?appid='.$apiKey.'&lat='.$lat.'&lon='.$lon;
+$uvi = 'https://api.openweathermap.org/data/2.5/uvi?appid='.$apiKey.'&lat='.$lat.'&lon='.$lon;
 $dh = curl_init();
 
 curl_setopt($dh, CURLOPT_HEADER, 0);
@@ -551,19 +551,21 @@ $to_uv = ($to_uv*5)-5;
 </head>
 <body>
 <div class="report-container">
+    <br>
     <h2><?php echo $city; ?> Weather</h2>
     <!-- chart1 -->
     <div class="fire-chart-wrap">
       <div class="fire-info-wrap">
         <strong>Today</strong>
         <div class="time">
-            <div><?php echo date("l g:i a", $currentTime); ?></div>
+	 <!--   <div><?php echo date("l g:i a", $currentTime); ?></div> -->
+<br>
             <div><?php echo date("jS F, Y",$currentTime); ?></div>
          <!--   <div><?php echo ucwords($data->weather[0]->description); ?></div>  -->
         </div>
         <div class="weather-forecast">
-           <?php echo min($temp1_mi); ?>째C<span
-                class="min-temperature"><?php echo max($temp1_ma); ?>째C</span>
+           <?php echo min($temp1_mi); ?>C  - <span
+                class="min-temperature"><?php echo max($temp1_ma); ?>C  </span>
         </div>
         <div class="time">
             <div>Humidity: <?php echo $humidity_today; ?> %</div>
@@ -619,8 +621,8 @@ $to_uv = ($to_uv*5)-5;
          <!--   <div><?php echo ucwords($data->weather[0]->description); ?></div>  -->
         </div>
         <div class="weather-forecast">
-           <?php echo min($temp2_mi); ?>째C<span
-                class="min-temperature"><?php echo max($temp2_ma); ?>째C</span>
+           <?php echo min($temp2_mi); ?>C  - <span
+                class="min-temperature"><?php echo max($temp2_ma); ?>C  </span>
         </div>
         <div class="time">
             <div>Humidity: <?php echo $humidity_tomorrow; ?> %</div>
@@ -676,8 +678,8 @@ $to_uv = ($to_uv*5)-5;
          <!--   <div><?php echo ucwords($data->weather[0]->description); ?></div>  -->
         </div>
         <div class="weather-forecast">
-           <?php echo min($temp3_mi); ?>째C<span
-                class="min-temperature"><?php echo max($temp3_ma); ?>째C</span>
+	   <?php echo min($temp3_mi); ?>C  - <span
+                class="min-temperature"><?php echo max($temp3_ma); ?>C  </span>
         </div>
         <div class="time">
             <div>Humidity: <?php echo $humidity_tomorrow_after; ?> %</div>
@@ -725,7 +727,27 @@ $to_uv = ($to_uv*5)-5;
     $to_uv = $to_uv-3;  
     ?>
       <div class="graph-row">
-        <h2>UV Index</h2>
+        <br>
+        <hr style="border: 2px solid red;" />
+        <br>
+         
+         <br>
+         <div style="display:flex">
+              <div style="flex:1;padding-right:5px;">
+                     <img src="includes/assets/images/fdiimage.jpg">
+    
+            </div>
+                 <div style="flex:1;padding-left:5px;">
+                      <img src="includes/assets/images/firedanger.jpg">
+            </div>
+         </div>
+
+
+	<br>
+        <hr style="border: 2px solid red;" />
+        <br>
+
+	<h2>UV Index for Today</h2>
         <div class="uv-graph">
 
           <div class="uv-graph-point uv-extreme" data-label="20">
@@ -748,7 +770,7 @@ $to_uv = ($to_uv*5)-5;
             <span class="uv-color"></span>
             <span class="uv-title">low</span>
           </div>
-
+          
           <div class="uv-arrow-point" style="bottom:<?php echo $to_uv;?>%;">
             <div class="uv-arrow"></div>
           </div>

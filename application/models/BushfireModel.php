@@ -5,6 +5,8 @@ class BushfireModel extends CI_Model {
     {
         parent::__construct();
         $this->load->database();
+        $this->load->library('session');
+
     }
 
 
@@ -18,7 +20,7 @@ class BushfireModel extends CI_Model {
     }
 
     public function getAllfrommap() {
-        $res = $this->db->query('SELECT Hospitals.* FROM Hospitals UNION ALL SELECT Fresh_Food.* FROM Fresh_Food UNION ALL SELECT Drinkable_Water.* FROM Drinkable_Water UNION ALL SELECT Emergency_Shelters.* FROM Emergency_Shelters ');
+        $res = $this->db->query('SELECT hospitals.* FROM hospitals UNION ALL SELECT fresh_food.* FROM fresh_food UNION ALL SELECT drinkable_water.* FROM drinkable_water UNION ALL SELECT emergency_shelters.* FROM emergency_shelters ');
         // $quary_result=$this->db->get();
         // $result = $quary_result->result();
         // print "<pre>";
@@ -91,5 +93,25 @@ class BushfireModel extends CI_Model {
          $data = '['. implode(",",$location) . ']';
          return $data;
      }
+
+     public function get_feedback() {
+        $this->db->select('*');
+        $this->db->from('feedback');
+        $this->db->where('approve =', 1);
+        $quary_result=$this->db->get();
+        $result = $quary_result->result();
+        return $result;        
+    }
+    public function send_feedback() {
+        $data = array(
+            'name'=>$this->input->post('name'),
+            'email'=>$this->input->post('email'),
+            'message'=>$this->input->post('message'),
+            'date'=>date('Y-m-d'),
+        );
+       $sql = $this->db->insert_string('feedback',$data);
+       $this->db->query($sql);
+       return ($this->db->affected_rows() > 0) ? true : false;
+    }
 
 }

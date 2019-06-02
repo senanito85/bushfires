@@ -24,6 +24,18 @@
                             <li class="nav-item active">
                                 <a class="nav-link active" href="<?php echo site_url("Home") ?>">Home <span class="sr-only">(current)</span></a>
                             </li>
+                            <li class="nav-item active">
+                                <a class="nav-link active" href="<?php echo site_url("Dashboard") ?>">Get Information <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link active" href="<?php echo site_url("Quize") ?>">Quiz <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link active" href="<?php echo site_url("Plan_Trip") ?>">Plan Trip <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link active" href="<?php echo site_url("Feedback") ?>">Feedback <span class="sr-only">(current)</span></a>
+                            </li>
                             <!-- <li><a class="hidden-xs">~</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
                             <li><a class="hidden-xs">~</a></li>

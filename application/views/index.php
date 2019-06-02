@@ -8,7 +8,7 @@ $lon = 144.9442;
 $googleApiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId . "&lang=en&units=metric&APPID=" . $apiKey;
 $googleApiUrl = 'http://api.openweathermap.org/data/2.5/uvi?appid='.$apiKey.'&lat='..'&lon='.; 
 */
-$googleApiUrl = 'http://api.openweathermap.org/data/2.5/forecast/?id='.$cityId.'&lang=en&units=metric&cnt=24&appid='.$apiKey;
+$googleApiUrl = 'https://api.openweathermap.org/data/2.5/forecast/?id='.$cityId.'&lang=en&units=metric&cnt=24&appid='.$apiKey;
 
 
 $ch = curl_init();
@@ -136,7 +136,7 @@ if($fdi_tomorrow_after>0){
     } 
 }
 
-$uvi = 'http://api.openweathermap.org/data/2.5/uvi?appid='.$apiKey.'&lat='.$lat.'&lon='.$lon;
+$uvi = 'https://api.openweathermap.org/data/2.5/uvi?appid='.$apiKey.'&lat='.$lat.'&lon='.$lon;
 $dh = curl_init();
 
 curl_setopt($dh, CURLOPT_HEADER, 0);

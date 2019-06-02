@@ -1,6 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+/**
+ * Define APP_URL Dynamically
+ * Write this at the bottom of index.php
+ *
+ * Automatic base url
+ */
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -23,7 +28,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://www.campingplanner.tk/';
+$config['base_url'] = 'https://www.campingplanner.tk/';
+#$config['base_url'] = APP_URL;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -100,8 +107,9 @@ $config['charset'] = 'UTF-8';
 | setting this variable to TRUE (boolean).  See the user guide for details.
 |
 */
-$config['enable_hooks'] = FALSE;
+#$config['enable_hooks'] = FALSE;
 
+$config['enable_hooks'] = FALSE;
 /*
 |--------------------------------------------------------------------------
 | Class Extension Prefix
